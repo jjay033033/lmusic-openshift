@@ -41,8 +41,7 @@ public class WxServlet extends HttpServlet {
 				return;
 			}
 		} catch (AesException e) {
-			System.out.println(ExceptionUtil.getExceptionMessage(e));
-			MailUtil.asyncSendErrorEmail(e);
+			ExceptionUtil.handleException("", e);
 			writer.print("出错了。。。看日志吧。。。");
 	        writer.flush();
 			return;

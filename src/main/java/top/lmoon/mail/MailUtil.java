@@ -76,6 +76,10 @@ public class MailUtil {
 		System.out.println(receiveMailAccount);
 		sendEmail(receiveMailAccount, "乱月", "客户", "神之信", "你好，哈哈哈。");
 	}
+	
+	public static void asyncSendErrorEmail(String msg,Exception e) {
+		asyncSendErrorEmail(msg+ExceptionUtil.getExceptionMessage(e));
+	}
 
 	public static void asyncSendErrorEmail(Exception e) {
 		asyncSendErrorEmail(ExceptionUtil.getExceptionMessage(e));
