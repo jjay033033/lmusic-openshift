@@ -30,10 +30,10 @@ public class WxServlet extends HttpServlet {
         String timestamp = req.getParameter("timestamp");
         String nonce = req.getParameter("nonce");
         String echostr = req.getParameter("echostr");
-        System.out.println("signature:"+signature);
-        System.out.println("timestamp:"+timestamp);
-        System.out.println("nonce:"+nonce);
-        System.out.println("echostr:"+echostr);
+        System.out.println("--signature:"+signature);
+        System.out.println("--timestamp:"+timestamp);
+        System.out.println("--nonce:"+nonce);
+        System.out.println("--echostr:"+echostr);
         PrintWriter writer = resp.getWriter();
         writer.print(echostr);
         writer.flush();
