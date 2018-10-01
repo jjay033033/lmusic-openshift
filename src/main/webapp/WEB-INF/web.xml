@@ -10,7 +10,7 @@
     <servlet>
         <display-name>WxServlet</display-name>
         <servlet-name>WxServlet</servlet-name>
-        <servlet-class>org.openshift.quickstarts.todolist.servlet.WxServlet</servlet-class>
+        <servlet-class>top.lmoon.wx.servlet.WxServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
